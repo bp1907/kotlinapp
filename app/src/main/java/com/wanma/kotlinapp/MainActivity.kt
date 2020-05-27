@@ -16,5 +16,13 @@ class MainActivity : BaseActivity() {
             val intent = Intent(this, UITestActivity::class.java)
             startActivity(intent)
         }
+        button3.setOnClickListener {
+            val intent = Intent(this, ListViewTestActivity::class.java)
+            startActivity(intent)
+        }
+        button4.setOnClickListener {
+            val intent = Intent(this, RecyclerViewTestActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
