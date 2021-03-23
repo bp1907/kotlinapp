@@ -1,5 +1,6 @@
 package com.wanma.kotlinapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,14 +13,19 @@ class UITestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_uitest)
 
-        button.setOnClickListener {
-            AlertDialog.Builder(this).apply {
-                setTitle("alertDialog")
-                setMessage("something important.")
-                setCancelable(false)
-                setPositiveButton("ok") {dialog, whitch ->}
-                setNegativeButton("cancle") {dialog, which ->}
-            }.show()
-        }
+//        button.setOnClickListener {
+//            AlertDialog.Builder(this).apply {
+//                setTitle("alertDialog")
+//                setMessage("something important.")
+//                setCancelable(false)
+//                setPositiveButton("ok") {dialog, whitch ->}
+//                setNegativeButton("cancle") {dialog, which ->}
+//            }.show()
+//        }
+    }
+
+    fun enterSys(view: View) {
+        val intent = Intent(this, TestActivity::class.java)
+        startActivity(intent)
     }
 }

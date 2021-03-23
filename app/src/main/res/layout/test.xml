@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg2"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/home_logo"
+        android:layout_width="@dimen/dp_106"
+        android:layout_height="@dimen/dp_30"
+        android:background="@mipmap/logo"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"/>
+    
+    <RelativeLayout
+        android:layout_below="@id/home_logo"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/car_message"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/dp_143"
+            android:layout_height="@dimen/dp_30.5"
+            android:text="01 车辆信息"
+            android:paddingLeft="@dimen/dp_20.5"
+            android:paddingTop="@dimen/dp_5"
+            android:textSize="@dimen/sp_15"
+            android:background="@mipmap/navigate_selected"/>
+        <TextView
+            android:id="@+id/driver_message"
+            android:layout_toRightOf="@id/car_message"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/dp_143"
+            android:layout_height="@dimen/dp_30.5"
+            android:text="02 司机信息"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingLeft="@dimen/dp_15"
+            android:textSize="@dimen/sp_15"
+            android:background="@mipmap/navigate"/>
+        <TextView
+            android:id="@+id/order_message"
+            android:layout_toRightOf="@id/driver_message"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/dp_143"
+            android:layout_height="@dimen/dp_30.5"
+            android:text="03 运单提交"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingLeft="@dimen/dp_17"
+            android:textSize="@dimen/sp_15"
+            android:background="@mipmap/navigate"/>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_58.5">
+
+            <ImageView
+                    android:id="@+id/driver_jsz"
+                    android:layout_width="@dimen/dp_251"
+                    android:layout_height="@dimen/dp_151"
+                    android:background="@mipmap/driver"
+                    android:layout_marginLeft="@dimen/dp_50"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/dp_60">
+
+                <TextView
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_14"
+                        android:text="*司机"
+                        android:textSize="@dimen/sp_10"
+                        android:layout_gravity="start"
+                        android:textColor="@color/home_button_text_color"/>
+
+                <EditText
+                        android:id="@+id/driver_name"
+                        android:layout_width="@dimen/dp_218.5"
+                        android:layout_height="@dimen/dp_30"
+                        android:padding="@dimen/dp_5"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:hint="请输入司机姓名"
+                        android:textColor="@color/home_button_text_color"
+                        android:background="@drawable/bg_edit"/>
+
+
+                <TextView
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_14"
+                        android:text="*司机电话"
+                        android:textSize="@dimen/sp_10"
+                        android:layout_marginTop="@dimen/dp_28"
+                        android:layout_gravity="start"
+                        android:textColor="@color/home_button_text_color"/>
+
+                <EditText
+                        android:id="@+id/phone"
+                        android:layout_width="@dimen/dp_218.5"
+                        android:layout_height="@dimen/dp_30"
+                        android:padding="@dimen/dp_5"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:hint="请输入电话"
+                        android:textColor="@color/home_button_text_color"
+                        android:background="@drawable/bg_edit"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/dp_82"
+                android:orientation="horizontal">
+
+
+            <Button
+                    android:id="@+id/driver_forward"
+                    android:layout_width="@dimen/dp_73.13"
+                    android:layout_height="@dimen/dp_22.5"
+                    android:textSize="@dimen/sp_10"
+                    android:background="@color/home_forward"
+                    android:text="上一步"/>
+
+            <Button
+                    android:id="@+id/driver_next"
+                    android:layout_width="@dimen/dp_73.13"
+                    android:layout_height="@dimen/dp_22.5"
+                    android:textSize="@dimen/sp_10"
+                    android:layout_marginLeft="@dimen/dp_51.88"
+                    android:background="@color/home_button_text_color"
+                    android:text="下一步"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_14"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_7.5"
+        android:textSize="@dimen/sp_10"
+        android:text="浙商中拓集团股份有限公司"/>
+
+    <LinearLayout
+            android:id="@+id/gesture_main_writepad_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="330dip"
+            android:layout_alignParentBottom="true"
+            android:background="#262626"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+        <Gallery
+                android:id="@+id/gesture_main_writepad_glly"
+                android:layout_width="fill_parent"
+                android:layout_height="60dip"
+                android:spacing="3dip" />
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/blue"
+                />
+
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="230dip" >
+
+            <LinearLayout
+                    android:id="@+id/search_no_input"
+                    android:layout_width="fill_parent"
+                    android:layout_height="230dip"
+                    android:background="@android:color/transparent"
+                    android:gravity="center" >
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:background="@android:color/transparent" />
+            </LinearLayout>
+
+            <android.gesture.GestureOverlayView
+                    android:id="@+id/gesture_main_writepad_gs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="230dip"
+                    android:fadeOffset="100000"
+                    android:gestureColor="#6B8E23"
+                    android:gestureStrokeType="multiple"
+                    android:gestureStrokeWidth="5" />
+        </RelativeLayout>
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:orientation="horizontal" >
+
+            <Button
+                    android:id="@+id/gesture_main_hide_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="2"
+                    android:background="#838B83"
+                    android:text="hide" />
+
+            <Button
+                    android:id="@+id/gesture_main_space_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="1"
+                    android:background="#838B83"
+                    android:text="space" />
+
+            <Button
+                    android:id="@+id/gesture_main_del_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="2"
+                    android:background="#838B83"
+                    android:text="del" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="20dp">-->
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="浙商中拓运输单"-->
+<!--                    android:textSize="20sp"/>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="10dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="提示信息"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:textColor="@color/red"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/testResult"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:padding="5dp"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="10dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="*单号"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:textColor="@color/red"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/no"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:background="@drawable/bg_edit"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="*运输日期"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:textColor="@color/red"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/date"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:hint="默认当天"-->
+<!--                    android:background="@drawable/bg_edit"/>-->
+
+<!--&lt;!&ndash;                <DatePicker&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_weight="2"/>&ndash;&gt;-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="10dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="*承运车号"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:textColor="@color/red"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/car_no"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:hint="请输入车号"-->
+<!--                    android:background="@drawable/bg_edit"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="*起运地"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:textColor="@color/red"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/start_address"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:hint="请输入起运地"-->
+<!--                    android:background="@drawable/bg_edit"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="10dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="*司机"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:textColor="@color/red"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/driver_name"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:hint="请输入司机姓名"-->
+<!--                    android:background="@drawable/bg_edit"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="*司机电话"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:textColor="@color/red"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/phone"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:hint="请输入电话"-->
+<!--                    android:background="@drawable/bg_edit"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="10dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="*货物"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:textColor="@color/red"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/goods"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:hint="请输入货物"-->
+<!--                    android:background="@drawable/bg_edit"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="2"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="10dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="*驾驶证附件"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:textColor="@color/red"/>-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/driver_jsz"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="250dp"-->
+<!--                    android:layout_weight="6"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="10dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="*行驶证附件"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:textColor="@color/red"/>-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/driver_xsz"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="250dp"-->
+<!--                    android:layout_weight="6"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="*签名"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:textColor="@color/red"/>-->
+
+<!--                <com.wanma.zhongtuo.view.SignView-->
+<!--                    android:id="@+id/sign"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="250dp"-->
+<!--                    android:layout_weight="6"-->
+<!--                    android:background="@drawable/bg_edit"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"/>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <Button-->
+<!--                    android:id="@+id/register"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@color/blue"-->
+<!--                    android:text="登记"-->
+<!--                    android:textColor="@color/white"/>-->
+<!--            </LinearLayout>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/destination"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="目的地"-->
+<!--                android:visibility="gone"/>-->
+
+<!--        </LinearLayout>-->
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+</RelativeLayout>

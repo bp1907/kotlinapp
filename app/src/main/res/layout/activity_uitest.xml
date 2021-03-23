@@ -1,21 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-        android:orientation="vertical">
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="This is TextView"/>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg">
 
-    <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:text="button"/>
-    <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-</LinearLayout>
+    <ImageView
+            android:layout_width="@dimen/dp_106"
+            android:layout_height="@dimen/dp_30"
+            android:background="@mipmap/logo"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="@dimen/dp_237"
+            android:layout_height="@dimen/dp_139.5"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:background="@color/home_grey">
+
+        <TextView
+                android:layout_width="@dimen/dp_143"
+                android:layout_height="@dimen/dp_45"
+                android:textSize="@dimen/sp_13"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="再生资源供应链服务平台欢迎页自助终端"/>
+
+        <Button
+                android:layout_width="@dimen/dp_194"
+                android:layout_height="@dimen/dp_27"
+                android:textSize="@dimen/sp_12"
+                android:gravity="center"
+                android:background="@color/home_button"
+                android:textColor="@color/home_button_text_color"
+                android:onClick="enterSys"
+                android:text="进入登记"/>
+
+    </LinearLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+            android:layout_below="@id/linearLayout"
+            android:layout_width="@dimen/dp_237"
+            android:layout_height="@dimen/dp_139.5"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/jsz"/>
+
+    <TextView
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_14"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_7.5"
+            android:textSize="@dimen/sp_10"
+            android:textColor="@color/white"
+            android:text="浙商中拓集团股份有限公司"/>
+
+</RelativeLayout>
+        <!--<?xml version="1.0" encoding="utf-8"?>-->
+        <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--              android:layout_width="match_parent"-->
+        <!--              android:layout_height="match_parent"-->
+        <!--        android:orientation="vertical">-->
+        <!--    <TextView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="This is TextView"/>-->
+
+        <!--    <Button-->
+        <!--            android:id="@+id/button"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            android:text="button"/>-->
+        <!--    <EditText-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"/>-->
+        <!--</LinearLayout>-->
